@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotora-carshop</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inicio">
+            <h1>Automotora Carshop</h1>
+            <img src="../assets/img/bugatti.jpg" alt="bugatti" class="imagen-bugatti">
+        </div>
+        <details>
+            <summary>Menu</summary>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./Vehiculos-usados.html">Vehiculos usados</a></li>
+                <li><a href="./Vehiculos-recomendados.html">Vehiculos Recomendados</a></li>
+                <li><a href="./Vehiculos-0km.html">Vehiculos 0km</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+    </details>
+    </header>
+    <main>
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <form action="enviar_formulario.php" method="POST">
+                <div class="Formulario">
+                    <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="asunto" required>
+                </div>
+                <div class="Formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="Formulario">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" required> 
+                </div>
+                <div class="Formulario">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="Formulario">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" required>
+                </div>
+                <div class="Formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar Mensaje</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3>Contactos</h3>
+        <p>carshop</p>
+        <p>car_shop</p>
+        <p>09x xxx xxx</p>
+    </footer>
+</body>
+</html>
