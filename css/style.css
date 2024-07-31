@@ -9,29 +9,53 @@ body {
 .header-inicio {
     position: relative;
     overflow: hidden;
-    height: 800px;
+    height: 100vh;
 }
 
 header h1 {
     position: absolute;
-    top: 50px;
+    top: 20%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     z-index: 10;
     color: white;
     background-color: rgba(0, 0, 0, 0);
-    padding: 5px;
+    padding: 20px;
     margin: 0;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                4px 4px 8px rgba(0, 0, 0, 0.6); 
 }
 
 header details {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 10px;
+    left: 10px;
     z-index: 10;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+header nav {
+    display: none;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    z-index: 10;
+}
+
+header details[open] summary {
+    background-color: #132AA4;
+}
+
+header details[open] nav {
+    display: block;
 }
 
 header nav ul {
@@ -41,26 +65,46 @@ header nav ul {
 }
 
 header nav ul li {
-    display: inline;
     margin-right: 10px;
 }
 
 header nav ul li a {
     text-decoration: none;
     color: white;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
+
+header nav ul li a:hover {
+    background-color: #132AA4;
+}
+
 
 header details summary {
     cursor: pointer;
     padding: 10px;
-    background-color: aqua;
-    border-radius: 8px;
+    background-color:  #4862EA;
     color: white;
+    border-radius: 8px;
     font-weight: bold;
+    border: 1px solid #132AA4;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+header details summary i{
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+header details summary:hover {
+    background-color: #132AA4;
+    border: 1px solid #4862EA;
 }
 
 header details[open] summary {
-    background-color: aqua;
+    background-color:#132AA4;
 }
 
 section {
@@ -212,12 +256,15 @@ button[type="submit"]:hover {
 
 .imagen-bugatti {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
     top: -25px;
-    display: block;
     margin-top: 20px;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+.vista-mobile{
+    display: none;
 }
 
 .cuadro {
@@ -275,11 +322,36 @@ button[type="submit"]:hover {
     .cuadro {
         grid-template-columns: repeat(2, 1fr);
     }
-    .header-inicio {
-        height: 400px;
-    }
     header h1 {
+        font-size: 3em;
+        padding: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+                    4px 4px 8px rgba(0, 0, 0, 0.6); 
+}
+    .imagen-bugatti {
+        display: none;
+}
+.vista-mobile {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+    header details {
         top: 20px;
+        left: 10px;
+    }
+    header nav {
+            width: 70vh;
+            height: 90vh;
+            left: 0;
+            top: 100%;
+    }
+    header details summary {
+        font-size: 1em;
+    }
+    header details summary i {
+        font-size: 1.2em;
     }
 }
 
@@ -288,23 +360,70 @@ button[type="submit"]:hover {
         grid-template-columns: 1fr;
     }
     header h1 {
-        font-size: 0.7em;
-        top: 10px;
+        font-size: 2em; 
+        padding: 10px; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+                    2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    header nav {
+        width: 50vh;
+        height: 90vh;
+        left: 0;
+        top: 100%;
+
     }
     header details summary { 
-        font-size: 0.7em;
+        font-size: 0.8em;
         padding: 5px;
     }
     section {
         padding: 0;
         margin-top: 0;
     }
-    .header-inicio {
-        height: 200px;
-    }
     .footer-pie {
         max-width: 200px;
         margin: 0 auto;
         text-align: center;
     }
+    .imagen-bugatti{
+        display: none;
+    }
+    .vista-mobile {
+        display: block;
+        width: 90vh;
+        height: 100vh;
+        object-fit: cover;
+    }
 }
+
+    @media (max-width: 375px) {
+        header details summary {
+            font-size: 0.8em;
+            padding: 8px;
+        }
+            header details summary i{
+                font-size: 1em;
+            
+        }
+        header nav {
+            width: 50vh;
+            height: 90vh;
+            left: 0;
+            top: 100%;
+        }
+        header nav ul li a {
+            padding: 8px 10px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        header h1 {
+            font-size: 2em;
+            padding: 5px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+                        2px 2px 4px rgba(0, 0, 0, 0.6);
+            top: 40%;
+        }
+        .imagen-bugatti{
+            display: none;
+        }
+    }
