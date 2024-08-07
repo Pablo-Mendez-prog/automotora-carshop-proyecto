@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Luxurious Roman', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+header h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    margin: 0;
+    font-size: 4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6);
+    z-index: 10; /* Ensure h1 is on top */
+}
+
+.imagen-bugatti, .vista-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-bugatti {
+    display: block; /* Show by default */
+}
+
+.vista-mobile {
+    display: none; /* Hide by default */
+}
+
+/* Navbar Styles */
+nav {
+    z-index: 20;
+}
+
+/* Main Content Styles */
+main {
+    padding: 0 15px;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(#4862EA, #132AA4);
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-column p {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Redes Sociales */
+.redes-sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.redes-sociales a {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+}
+
+.redes-sociales a .fa {
+    margin-right: 16px;
+}
+
+.redes-sociales a:hover {
+    background-color: #444;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .imagen-bugatti {
+        display: block;
+    }
+
+    .vista-mobile {
+        display: none;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .imagen-bugatti {
+        display: none;
+    }
+
+    .vista-mobile {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 3em;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    .footer-column {
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .vista-mobile {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+}
+
+@media (max-width: 300px) {
+    html, body {
+        font-size: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 2.3rem;
+    }
+    .vista-mobile {
+        width: 100%;
+        height: 100vh;
+        display: block;
+    }
+}
