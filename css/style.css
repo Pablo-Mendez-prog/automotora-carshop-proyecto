@@ -36,6 +36,7 @@ header details {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     border-radius: 8px;
+    display: block;
 }
 
 header nav {
@@ -56,6 +57,7 @@ header details[open] summary {
 
 header details[open] nav {
     display: block;
+    width: 300px;
 }
 
 header nav ul {
@@ -318,6 +320,42 @@ button[type="submit"]:hover {
     background-color: #45a049;
 }
 
+.auto-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444444;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.auto-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.auto-card h2 {
+    margin-bottom: 10px;
+}
+
+.auto-card p {
+    text-align: center;
+    line-height: 1.6;
+}
+.poem {
+    text-align: center;
+    font-style: italic;
+}
+.poem p {
+    text-align: justify;
+    line-height: 1.6;
+    margin: 20px 0 0 40px;
+}
+
+
 @media (max-width: 768px) {
     .cuadro {
         grid-template-columns: repeat(2, 1fr);
@@ -338,11 +376,11 @@ button[type="submit"]:hover {
     object-fit: cover;
 }
     header details {
-        top: 20px;
-        left: 10px;
+        top: 0;
+        left: 0;
     }
     header nav {
-            width: 70vh;
+            width: 50vh;
             height: 90vh;
             left: 0;
             top: 100%;
@@ -366,7 +404,7 @@ button[type="submit"]:hover {
                     2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     header nav {
-        width: 50vh;
+        width: 500%;
         height: 90vh;
         left: 0;
         top: 100%;
@@ -406,7 +444,7 @@ button[type="submit"]:hover {
             
         }
         header nav {
-            width: 50vh;
+            width: 35vh;
             height: 90vh;
             left: 0;
             top: 100%;
@@ -425,5 +463,8 @@ button[type="submit"]:hover {
         }
         .imagen-bugatti{
             display: none;
+        }
+        header details[open] nav {
+            width: 35vh;
         }
     }
