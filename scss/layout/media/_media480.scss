@@ -1,0 +1,43 @@
+@media (max-width: 480px) {
+
+    header{
+        h1 {
+            font-size: 2em;
+            padding: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+                        2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .imagen-bugatti {
+            display: none;
+        }
+        .vista-mobile {
+            display: block;
+            width: 90vh;
+            height: 100vh;
+            object-fit: cover;
+        }
+        .navbar-mobile {
+            display: block;
+        }
+        .navbar-desktop {
+            display: none;
+        }
+}
+main{
+    .cuadro {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    }
+        section {
+            padding: 0;
+            margin-top: 0;
+        }
+        .footer-pie {
+            max-width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+    
+    }

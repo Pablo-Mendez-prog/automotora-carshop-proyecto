@@ -1,0 +1,27 @@
+.auto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444444;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
