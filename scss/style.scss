@@ -20,3 +20,11 @@
 
 @import "./layout/media/media320";
 
+%text-base {
+    color: white;
+    text-decoration: none;
+}
+
+%text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6);
+}

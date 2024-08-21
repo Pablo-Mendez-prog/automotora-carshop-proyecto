@@ -9,9 +9,9 @@
     
 </head>
 <body>
-    <header>
+    <header class="header2">
         <div>
-            <h1>Automotora Carshop</h1>
+            <h1>Formulario de Contacto</h1>
         </div>
         <details class="navbar-mobile">
             <summary><i class="fas fa-bars"></i></summary>
@@ -41,8 +41,7 @@
     </header>
     <main>
         <section>
-            <h2>Formulario de Contacto</h2>
-            <form action="enviar_formulario.php" method="POST">
+            <form id="contactForm" action="enviar_formulario.php" method="POST">
                 <div class="Formulario">
                     <label for="asunto">Asunto</label>
                 <input type="text" id="asunto" name="asunto" required>
@@ -70,6 +69,7 @@
                 <div>
                     <button type="submit">Enviar Mensaje</button>
                 </div>
+                <div class="form-feedback" id="formFeedback"></div>
             </form>
         </section>
     </main>
@@ -99,5 +99,18 @@
         </div>
     </footer>
     <script src="https://kit.fontawesome.com/6e82eb5be5.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            feedback.innerHTML = 'Enviando...';
+            feedback.classList.add('loading');
+            setTimeout(() => {
+                feedback.innerHTML = '¡Mensaje enviado con éxito!';
+                feedback.classList.remove('loading');
+                feedback.classList.add('success');
+            }, 2000); 
+        });
+    </script>
 </body>
 </html>
