@@ -1,9 +1,16 @@
 body {
+  line-height: 1.6;
   font-family: "Luxurious Roman", sans-serif;
   background-color: black;
   color: white;
   margin: 0;
   padding: 0; }
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(360deg); } }
 
 @keyframes scaleUp {
   0% {
@@ -17,7 +24,7 @@ body {
   100% {
     opacity: 1; } }
 
-.poem {
+.poem, .extend-card {
   text-align: center;
   font-style: italic;
   background-color: darkgrey;
@@ -26,18 +33,19 @@ body {
   border-radius: 12px;
   height: 600px;
   width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease-out; }
-  .poem:hover {
-    animation: scaleUp 0.3s ease forwards;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
-  .poem p {
+  .poem:hover, .extend-card:hover {
+    animation: scaleUp 0.3s ease-out forwards;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: rotate 1s linear; }
+  .poem p, .extend-card p {
     text-align: justify;
     line-height: 1.6;
     margin: 10px 40px;
     text-overflow: ellipsis;
     font-size: 14px; }
-  .poem img {
+  .poem img, .extend-card img {
     width: 100%;
     max-height: 150px;
     object-fit: cover; }
@@ -365,3 +373,9 @@ header h1, .footer .footer-container .footer-column p,
 
 header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6); }
+
+.extend-card {
+  margin: 150px 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: wrap; }

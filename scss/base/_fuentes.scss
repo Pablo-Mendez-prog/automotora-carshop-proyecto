@@ -1,3 +1,13 @@
+@keyframes rotate {
+    0% {
+    transform: rotateY(0deg);
+}
+
+    100% {
+    transform: rotateY(360deg);
+    }
+}
+
 @keyframes scaleUp {
     0% {
     transform: scale(1);
@@ -25,12 +35,13 @@
     border-radius: 12px;
     height: 600px;
     width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
     animation: fadeIn 0.6s ease-out;
 
     &:hover {
-        animation: scaleUp 0.3s ease forwards;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: scaleUp 0.3s ease-out forwards;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: rotate 1s linear;
 }
 
 p {
@@ -47,3 +58,4 @@ img {
     object-fit: cover;
 }
 }
+

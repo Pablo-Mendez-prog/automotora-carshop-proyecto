@@ -28,3 +28,11 @@
 %text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6);
 }
+
+.extend-card {
+    @extend .poem;
+    margin: 150px 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: wrap;
+}
