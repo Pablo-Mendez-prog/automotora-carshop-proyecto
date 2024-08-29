@@ -378,4 +378,5 @@ header h1 {
   margin: 150px 100px;
   display: flex;
   justify-content: center;
-  flex-direction: wrap; }
+  flex-direction: wrap;
+  height: auto; }
