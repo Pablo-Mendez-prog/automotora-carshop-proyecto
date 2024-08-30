@@ -157,9 +157,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
     padding-top: 60px;
     background: $footer-gradient;
+    box-shadow: 2px 2px 4px rgba(0, 195, 255, 0.8),;
     
     
     h1 {

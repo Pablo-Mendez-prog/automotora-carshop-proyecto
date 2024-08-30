@@ -1,7 +1,7 @@
 body {
   line-height: 1.6;
   font-family: "Luxurious Roman", sans-serif;
-  background-color: black;
+  background: linear-gradient(#000101, #3a3a3a, black);
   color: white;
   margin: 0;
   padding: 0; }
@@ -24,7 +24,7 @@ body {
   100% {
     opacity: 1; } }
 
-.poem, .extend-card {
+.poem, .extend-card, .extend-card2 {
   text-align: center;
   font-style: italic;
   background-color: darkgrey;
@@ -35,17 +35,17 @@ body {
   width: 280px;
   transition: transform 0.6s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease-out; }
-  .poem:hover, .extend-card:hover {
+  .poem:hover, .extend-card:hover, .extend-card2:hover {
     animation: scaleUp 0.3s ease-out forwards;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     animation: rotate 1s linear; }
-  .poem p, .extend-card p {
+  .poem p, .extend-card p, .extend-card2 p {
     text-align: justify;
     line-height: 1.6;
     margin: 10px 40px;
     text-overflow: ellipsis;
     font-size: 14px; }
-  .poem img, .extend-card img {
+  .poem img, .extend-card img, .extend-card2 img {
     width: 100%;
     max-height: 150px;
     object-fit: cover; }
@@ -151,7 +151,7 @@ header {
       display: none; }
   .navbar-mobile nav {
     padding: 10px 0;
-    background: linear-gradient(#4862EA, #132AA4);
+    background: linear-gradient(#4873ea, #2e41cc, #134fa4);
     border-radius: 8px;
     position: absolute;
     top: 100%;
@@ -215,9 +215,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
   padding-top: 60px;
-  background: linear-gradient(#4862EA, #132AA4); }
+  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
+  box-shadow: 2px 2px 4px rgba(0, 195, 255, 0.8); }
   .header2 h1 {
     position: relative;
     font-size: 2.5em;
@@ -246,10 +247,11 @@ main {
       display: block; }
 
 .footer {
-  background: linear-gradient(#4862EA, #132AA4);
+  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
   color: white;
   padding: 20px 0;
-  font-size: 14px; }
+  font-size: 14px;
+  box-shadow: 0px 0px 8px rgba(0, 195, 255, 0.8); }
   .footer .footer-container {
     display: flex;
     flex-direction: row;
@@ -375,8 +377,18 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6); }
 
 .extend-card {
+  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
   margin: 150px 100px;
   display: flex;
   justify-content: center;
   flex-direction: wrap;
-  height: auto; }
+  height: auto;
+  box-shadow: 4px 20px 20px #037abf; }
+
+.extend-card2 {
+  background: linear-gradient(#00e5ff, #004e62);
+  margin: 150px 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: wrap;
+  box-shadow: 4px 20px 20px #037abf; }
