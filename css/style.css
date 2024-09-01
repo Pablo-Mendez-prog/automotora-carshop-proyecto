@@ -294,6 +294,8 @@ main {
           background-color: #444; }
 
 @media (max-width: 768px) {
+  body {
+    background-size: 100% 100%; }
   header h1 {
     font-size: 3em;
     padding: 15px;
@@ -319,6 +321,8 @@ main {
     margin: 10px 0; } }
 
 @media (max-width: 480px) {
+  body {
+    background-size: 100% 100%; }
   header h1 {
     font-size: 2em;
     padding: 10px;
@@ -346,6 +350,8 @@ main {
     text-align: center; } }
 
 @media (max-width: 320px) {
+  body {
+    background-size: 100% 100%; }
   header details summary {
     font-size: 0.8em;
     padding: 8px; }
