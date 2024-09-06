@@ -25,6 +25,7 @@ body{
         .navbar-desktop {
             display: none;
         }
+        
 }
 main{
     .cuadro {
@@ -42,5 +43,14 @@ main{
             text-align: center;
         }
     
-    
+        .poem{
+            margin: 50px 0px;
+        
+        }
+        .extend-card{
+            margin: 50px 0px !important;
+        }
+        .extend-card2{
+            margin: 50px 0px !important;
+        }
     }

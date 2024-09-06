@@ -27,8 +27,8 @@ body {
 .poem, .extend-card, .extend-card2 {
   text-align: center;
   font-style: italic;
-  background-color: #939393;
-  margin: 50px 150px;
+  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
+  margin: 100px 75px;
   margin-top: 8px;
   border-radius: 12px;
   min-height: 600px;
@@ -219,18 +219,21 @@ header {
   align-items: center;
   height: 15vh;
   padding-top: 60px;
-  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
+  background: linear-gradient(white, #4343fc);
   box-shadow: 2px 2px 4px rgba(0, 195, 255, 0.8); }
   .header2 h1 {
     position: relative;
-    font-size: 2.5em;
-    color: white;
+    font-size: 2.0em;
+    color: black;
     margin: 60px 0 0 0;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 4px 4px 8px rgba(0, 0, 0, 0.6); }
+    text-shadow: 2px 2px 4px rgba(248, 253, 255, 0.8), 2px 2px 4px rgba(193, 236, 252, 0.6);
+    padding-bottom: 4px; }
 
 main {
   padding-top: 60px; }
+  main h2 a {
+    color: white; }
   main .cuadro {
     display: flex;
     flex-wrap: wrap;
@@ -308,6 +311,14 @@ main {
         font-size: 1.2em; }
   header .navbar-desktop {
     display: none; }
+  header .header2 {
+    font-size: 2.0em; }
+  header .poem, header .extend-card, header .extend-card2 {
+    margin: 50px 0px; }
+  header .extend-card {
+    margin: 50px 0px !important; }
+  header .extend-card2 {
+    margin: 50px 0px !important; }
   .footer .footer-container {
     flex-direction: column;
     align-items: center;
@@ -343,7 +354,13 @@ main {
   .footer-pie {
     max-width: 200px;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center; }
+  .poem, .extend-card, .extend-card2 {
+    margin: 50px 0px; }
+  .extend-card {
+    margin: 50px 0px !important; }
+  .extend-card2 {
+    margin: 50px 0px !important; } }
 
 @media (max-width: 320px) {
   body {
@@ -367,14 +384,22 @@ main {
     padding: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.6);
     top: 40%; }
-  .imagen-bugatti {
+  header .imagen-bugatti {
     display: none; }
-  header details[open] nav {
+  header header details[open] nav {
     width: 35vh; }
-  .navbar-mobile {
+  header .navbar-mobile {
     display: block; }
-  .navbar-desktop {
-    display: none; } }
+  header .navbar-desktop {
+    display: none; }
+  .header2 h1 {
+    font-size: 1.5em; }
+  .poem, .extend-card, .extend-card2 {
+    margin: 50px 0px; }
+  .extend-card {
+    margin: 0px 0px !important; }
+  .extend-card2 {
+    margin: 0px 0px !important; } }
 
 header h1, .footer .footer-container .footer-column p,
 .footer .footer-container .footer-column a {
@@ -394,7 +419,7 @@ header h1 {
   box-shadow: 4px 20px 20px #037abf; }
 
 .extend-card2 {
-  background: linear-gradient(#00e5ff, #004e62);
+  background: linear-gradient(#4873ea, #2e41cc, #134fa4);
   margin: 150px 100px;
   display: flex;
   justify-content: center;

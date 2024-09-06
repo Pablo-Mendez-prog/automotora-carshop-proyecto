@@ -33,7 +33,7 @@
 .extend-card {
     @extend .poem;
     background: $footer-gradient;
-    margin: 0px 0px;
+    margin: 100px 75px;
     display: flex;
     justify-content: center;
     flex-direction: wrap;
@@ -44,7 +44,7 @@
 .extend-card2{
     @extend .poem;
     background:linear-gradient(rgb(0, 229, 255),rgb(0, 78, 98));
-    margin: 0px 0px;
+    margin: 100px 75px;
     display: flex;
     justify-content: center;
     flex-direction: wrap;
